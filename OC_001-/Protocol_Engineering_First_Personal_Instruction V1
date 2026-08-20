@@ -1,0 +1,265 @@
+a practical course.
+Level 1 — Instruction thinking
+First learn to decompose any request into:
+Goal → Context → Inputs → Actions → Constraints → Output → Stop
+Example:
+"Analyze this dataset and tell me what's wrong."
+You learn to turn that into questions:
+Goal: What does "what's wrong" mean?
+Context: Why is the dataset being analyzed?
+Input: Which dataset/version?
+Actions: Inspect → measure → compare → classify.
+Constraints: Don't modify the dataset.
+Output: Findings + evidence.
+Stop: Stop after analysis; don't repair.
+That mental decomposition works for coding, research, writing, automation, administration, etc.
+Level 2 — Instruction precision
+Then you'll learn the difference between:
+"Check the code."
+and:
+"Inspect the current implementation for runtime defects. Do not modify source files. Record each defect with file, location, reproduction evidence, observed behavior, expected behavior, and severity."
+You'll learn:
+ambiguity removal
+scope boundaries
+explicit constraints
+priority ordering
+terminology
+required outputs
+forbidden actions
+stop conditions
+Level 3 — Instruction control
+This is where you learn to control an AI agent.
+We'll practice:
+MUST
+MUST NOT
+MAY
+SHOULD
+ONLY
+EXCEPT
+IF / THEN
+OTHERWISE
+HALT
+WAIT FOR APPROVAL
+For example:
+If the source file differs from the recorded checkpoint, HALT. Do not continue using the modified version.
+That's much stronger than:
+"Be careful not to modify the source."
+Level 4 — Protocol thinking
+Then we move beyond individual instructions.
+You'll learn:
+Purpose → Scope → Authority → Preconditions → Variables → Procedure → Measurement → Integrity → Failure handling → Interpretation → Exit
+At this stage you'll start designing protocols yourself.
+For example, instead of:
+"Test whether the classifier is accurate."
+you'll be able to construct:
+PROTOCOL
+
+QUESTION
+What property is being measured?
+
+SYSTEM
+What exact implementation is under examination?
+
+CONTROL
+What must remain unchanged?
+
+INPUT
+What constitutes one experimental observation?
+
+GROUND TRUTH
+What defines a correct result?
+
+PROCEDURE
+How is each observation produced?
+
+MEASUREMENT
+How is correctness calculated?
+
+INTEGRITY
+How do we verify the experiment wasn't contaminated?
+
+FAILURE
+How are failures classified?
+
+INTERPRETATION
+What conclusions are permitted?
+
+HALT
+What conditions terminate execution?
+
+OUTPUT
+What evidence must be returned?
+At that point, you aren't copying my style anymore.
+You're thinking like a protocol designer.
+Level 5 — Rule precedence
+This is a very important skill for AI instructions.
+Suppose you write:
+Don't modify the project.
+Then later:
+Fix any bugs you discover.
+Those instructions conflict.
+Which wins?
+You'll learn to construct an explicit hierarchy:
+AUTHORITY
+
+1. Safety / system constraints
+2. Experiment integrity
+3. Frozen checkpoint
+4. Research objective
+5. Procedure
+6. Optional optimization
+Then the agent can resolve conflicts predictably.
+We'll practice deliberately creating contradictory instructions and learning how to repair them.
+Level 6 — Failure engineering
+A strong protocol doesn't merely say what happens when everything works.
+It asks:
+What can go wrong?
+You'll learn to identify:
+execution failure
+input failure
+environment failure
+measurement failure
+interpretation failure
+contamination
+ambiguity
+missing evidence
+unexpected state
+agent deviation
+Then you'll learn to write:
+FAILURE F-004
+
+Condition:
+Required checkpoint cannot be verified.
+
+Action:
+HALT.
+
+Do not:
+Substitute another checkpoint.
+Infer the correct version.
+Continue from memory.
+
+Required output:
+Report the missing verification evidence.
+That's a very transferable skill.
+Level 7 — Experimental design
+Then we'll teach you how to create experiments from scratch.
+You'll learn:
+control groups
+variables
+ground truth
+sampling
+boundary cases
+negative controls
+replication
+measurement error
+confounding
+hypotheses
+falsification
+reproducibility
+contamination
+This is where your EXP-003 → EXP-004 work becomes much more rigorous.
+Level 8 — Protocol architecture
+Finally, you'll learn to build families of protocols.
+For example:
+MASTER PROTOCOL
+      │
+      ├── EXP-001
+      ├── EXP-002
+      ├── EXP-003
+      │      └── results
+      │
+      ├── EXP-004
+      │      └── failure taxonomy
+      │
+      ├── EXP-005
+      │      └── hypothesis test
+      │
+      └── EXP-006
+             └── intervention
+And you'll learn how to prevent one experiment from invalidating another.
+The daily training method
+I suggest we make this practical rather than lecture-heavy.
+Each day I'll give you a small real-world scenario.
+For example:
+DAY 1 — Simple task
+An AI agent must inspect a folder and identify duplicate files. It must not delete anything.
+You write the instruction.
+Then I'll grade it:
+GOAL             9/10
+SCOPE            7/10
+CONSTRAINTS      8/10
+AMBIGUITY        6/10
+OUTPUT CONTRACT  5/10
+STOP CONDITIONS  2/10
+
+TOTAL: 37/60
+Then I'll show you why.
+But I won't simply rewrite it for you.
+You'll rewrite it.
+Next day, slightly harder.
+Eventually:
+Day 1     Basic instructions
+Day 2     Scope
+Day 3     Constraints
+Day 4     Output contracts
+Day 5     Conditional rules
+Day 6     Stop conditions
+Day 7     Rule precedence
+Day 8     Failure handling
+Day 9     State machines
+Day 10    Protocol fundamentals
+Day 11    Variables
+Day 12    Controls
+Day 13    Ground truth
+Day 14    Measurement
+Day 15    Experimental integrity
+Day 16    Failure taxonomy
+Day 17    Reproducibility
+Day 18    Contamination
+Day 19    Multi-stage protocols
+Day 20    Full protocol design
+Then we stop giving you artificial exercises and start giving you messy real-world problems.
+That's when the skill becomes yours.
+Your first fundamental rule
+I want you to remember this one:
+Never begin by asking, "What should I tell the AI?"
+First ask:
+"What state do I want the AI to produce, and what rules must govern how it gets there?"
+That single change in thinking is enormous.
+For an ordinary instruction:
+TASK
+ ↓
+INSTRUCTION
+ ↓
+RESULT
+For a strong instruction:
+DESIRED STATE
+ ↓
+TASK DECOMPOSITION
+ ↓
+CONSTRAINTS
+ ↓
+EXECUTION RULES
+ ↓
+VERIFICATION
+ ↓
+RESULT
+For a protocol:
+QUESTION
+ ↓
+HYPOTHESIS
+ ↓
+CONTROLLED SYSTEM
+ ↓
+PROCEDURE
+ ↓
+MEASUREMENT
+ ↓
+VALIDITY
+ ↓
+INTERPRETATION
+ ↓
+DECISION
+That's the skill set I'll teach you.
+And yes — you can eventually become capable of creating instructions and protocols for things you've never seen before, because you'll be learning the underlying construction logic rather than copying my EXP-003 format.
