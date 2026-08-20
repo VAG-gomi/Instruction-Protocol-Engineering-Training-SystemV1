@@ -1,0 +1,705 @@
+Yes. And after rerunning the idea against external work on requirements engineering, verification/validation, traceability, and instruction-following evaluation, I would upgrade the curriculum substantially. NASA's requirements guidance emphasizes clarity, completeness, consistency, verifiability, and bidirectional traceability; current LLM evaluation research similarly emphasizes objectively verifiable instructions and careful evaluation protocols. 
+
+So let's build Instruction & Protocol Engineering School — v2.
+
+The goal is not "learn how OC writes."
+
+The goal is:
+
+> Become capable of independently designing, criticizing, testing, and revising instructions and protocols for unfamiliar problems.
+
+
+
+
+---
+
+Instruction & Protocol Engineering — Training System v2
+
+The two disciplines
+
+Discipline A — Instruction Engineering
+
+Question:
+
+> How do I tell an agent exactly what to do without leaving dangerous ambiguity?
+
+
+
+You'll learn to construct:
+
+OBJECTIVE
+    ↓
+CONTEXT
+    ↓
+INPUTS
+    ↓
+TASK
+    ↓
+CONSTRAINTS
+    ↓
+PRIORITY
+    ↓
+PROCEDURE
+    ↓
+VERIFICATION
+    ↓
+OUTPUT
+    ↓
+STOP
+
+
+---
+
+Discipline B — Protocol Engineering
+
+Question:
+
+> How do I design a process whose results remain valid, reproducible, auditable, and correctly interpreted?
+
+
+
+You'll learn:
+
+PURPOSE
+    ↓
+RESEARCH / OPERATIONAL QUESTION
+    ↓
+AUTHORITY
+    ↓
+SCOPE
+    ↓
+PRECONDITIONS
+    ↓
+VARIABLES / REQUIREMENTS
+    ↓
+PROCEDURE
+    ↓
+CONTROLS
+    ↓
+MEASUREMENT
+    ↓
+EVIDENCE
+    ↓
+FAILURE HANDLING
+    ↓
+VALIDITY
+    ↓
+INTERPRETATION
+    ↓
+DECISION
+    ↓
+TRACEABILITY
+
+NASA's requirements-management guidance is particularly useful here because it treats requirements as controlled entities that should be decomposed, allocated, verified, and maintained with bidirectional traceability. 
+
+
+---
+
+The new curriculum
+
+Instead of my earlier 20-day list, I'd make this six stages.
+
+STAGE I — Instruction Fundamentals
+
+Level 1 — Intent
+
+Learn to identify:
+
+> What exactly am I asking for?
+
+
+
+Level 2 — Scope
+
+Learn:
+
+> What is included and excluded?
+
+
+
+Level 3 — Inputs
+
+Learn:
+
+> What information/artifacts does the agent have permission to use?
+
+
+
+Level 4 — Actions
+
+Learn:
+
+> What exactly should it do?
+
+
+
+Level 5 — Outputs
+
+Learn:
+
+> What constitutes a complete answer?
+
+
+
+Level 6 — Constraints
+
+Learn:
+
+> What must it NOT do?
+
+
+
+Level 7 — Stop conditions
+
+Learn:
+
+> When must it stop instead of improvising?
+
+
+
+
+---
+
+STAGE II — Precision Engineering
+
+Level 8 — Ambiguity detection
+
+You'll learn to hunt words such as:
+
+> appropriate
+reasonable
+improve
+optimize
+check
+fix
+correctly
+sufficient
+relevant
+etc.
+
+
+
+NASA explicitly warns against vague/unverifiable terms because they make requirements difficult to test. 
+
+We'll turn:
+
+> "Make the code better."
+
+
+
+into something operationally testable.
+
+
+---
+
+Level 9 — Atomic requirements
+
+One requirement should not secretly contain five requirements.
+
+NASA specifically recommends that individual requirements express one thought and be independently verifiable. 
+
+You'll practice splitting:
+
+> "Inspect, repair, test, optimize, document, and commit the project."
+
+
+
+into separate controlled requirements.
+
+
+---
+
+Level 10 — Normative language
+
+You'll master:
+
+MUST
+MUST NOT
+SHALL
+SHOULD
+SHOULD NOT
+MAY
+ONLY
+EXCEPT
+IF
+THEN
+OTHERWISE
+HALT
+WAIT
+
+And learn when each is appropriate.
+
+
+---
+
+STAGE III — Agent Control
+
+Level 11 — Rule precedence
+
+What happens when instructions conflict?
+
+You'll learn to create:
+
+PRIORITY 1
+Integrity
+
+PRIORITY 2
+Safety
+
+PRIORITY 3
+Research objective
+
+PRIORITY 4
+Procedure
+
+PRIORITY 5
+Optimization
+
+Then you'll deliberately construct conflicting instructions and resolve them.
+
+
+---
+
+Level 12 — Conditional execution
+
+You'll learn:
+
+IF X
+    THEN Y
+
+IF NOT X
+    HALT
+
+IF X AND Y
+    THEN Z
+
+IF X OR Y
+    THEN A
+
+UNLESS X
+    DO Y
+
+This turns prose into operational logic.
+
+
+---
+
+Level 13 — State control
+
+You'll learn to think:
+
+UNINITIALIZED
+     ↓
+READY
+     ↓
+RUNNING
+     ↓
+VERIFIED
+     ↓
+COMPLETE
+
+and prevent illegal transitions.
+
+
+---
+
+Level 14 — Agent deviation control
+
+What happens if the AI:
+
+invents missing information?
+
+modifies something it shouldn't?
+
+encounters an unexpected file?
+
+gets an error?
+
+thinks your procedure is inefficient?
+
+discovers a tempting improvement?
+
+
+You'll learn to specify the response before the situation occurs.
+
+
+---
+
+STAGE IV — Evidence Engineering
+
+This becomes the core of your particular methodology.
+
+Level 15 — Evidence classification
+
+We'll formally distinguish:
+
+E0 — MODEL KNOWLEDGE
+
+E1 — EXTERNAL / WEB EVIDENCE
+
+E2 — IMPLEMENTATION EVIDENCE
+
+E3 — EXPERIMENTAL EVIDENCE
+
+E4 — ANALYTICAL INFERENCE
+
+E5 — HYPOTHESIS
+
+E6 — SUPPORTED CONCLUSION
+
+And we'll practice refusing to promote one category into another.
+
+For example:
+
+> "The code contains a regex."
+
+
+
+Implementation evidence.
+
+> "The regex matched 8/12 test cases."
+
+
+
+Experimental evidence.
+
+> "The regex is probably causing false positives."
+
+
+
+Hypothesis.
+
+Not the same thing.
+
+
+---
+
+Level 16 — Evidence provenance
+
+Every important claim should answer:
+
+WHERE DID THIS COME FROM?
+
+Possible answers:
+
+source file
+test execution
+experiment
+web source
+measurement
+calculation
+inference
+human assertion
+
+NASA's verification guidance similarly emphasizes preserving verification outcomes, procedures, versions/configurations, expected-vs-actual results, anomalies, and traceability. 
+
+
+---
+
+Level 17 — Traceability
+
+You'll learn:
+
+QUESTION
+   ↓
+REQUIREMENT
+   ↓
+IMPLEMENTATION
+   ↓
+TEST
+   ↓
+RESULT
+   ↓
+CONCLUSION
+
+And backwards:
+
+CONCLUSION
+   ↓
+RESULT
+   ↓
+TEST
+   ↓
+IMPLEMENTATION
+   ↓
+REQUIREMENT
+   ↓
+QUESTION
+
+That's bidirectional traceability. 
+
+
+---
+
+STAGE V — Protocol Engineering
+
+Now we leave ordinary instructions.
+
+Level 18 — Protocol anatomy
+
+You'll learn to construct:
+
+IDENTITY
+PURPOSE
+QUESTION
+SCOPE
+AUTHORITY
+DEFINITIONS
+PRECONDITIONS
+VARIABLES
+CONTROLS
+PROCEDURE
+MEASUREMENT
+VALIDITY
+FAILURE HANDLING
+STOP CONDITIONS
+INTERPRETATION
+OUTPUT
+PROVENANCE
+CHANGE CONTROL
+
+
+---
+
+Level 19 — Experimental protocols
+
+You'll learn:
+
+control groups
+
+positive controls
+
+negative controls
+
+boundary cases
+
+independent variables
+
+dependent variables
+
+controlled variables
+
+ground truth
+
+sampling
+
+replication
+
+measurement criteria
+
+
+
+---
+
+Level 20 — Failure protocols
+
+Instead of:
+
+> "If something goes wrong, report it."
+
+
+
+you'll learn:
+
+FAILURE F-003
+
+TRIGGER:
+Expected artifact cannot be verified.
+
+ACTION:
+HALT.
+
+PROHIBITED:
+Do not substitute another artifact.
+Do not infer the missing version.
+Do not continue from memory.
+
+EVIDENCE:
+Record the verification failure.
+
+RECOVERY:
+Await authorization.
+
+
+---
+
+Level 21 — Contamination control
+
+You'll learn to define exactly what invalidates an experiment:
+
+source changed
+corpus changed
+ground truth changed
+environment changed
+method changed
+missing data
+selective deletion
+post-hoc relabeling
+unrecorded rerun
+
+This is where EXP-003 becomes much more than a prompt.
+
+
+---
+
+STAGE VI — Advanced Protocol Architecture
+
+Level 22 — Protocol states
+
+DRAFT
+ ↓
+REVIEW
+ ↓
+AUTHORIZED
+ ↓
+FROZEN
+ ↓
+EXECUTING
+ ↓
+RAW RESULTS SEALED
+ ↓
+ANALYSIS
+ ↓
+REPORT
+ ↓
+REVIEWED
+
+
+---
+
+Level 23 — Gates
+
+For example:
+
+GATE-001
+Can execution begin?
+
+GATE-002
+Is the checkpoint intact?
+
+GATE-003
+Are the inputs frozen?
+
+GATE-004
+Are raw results complete?
+
+GATE-005
+Is interpretation permitted?
+
+GATE-006
+Can the next experiment be authorized?
+
+
+---
+
+Level 24 — Change control
+
+You'll learn the difference between:
+
+> changing an implementation
+
+
+
+and
+
+> changing the protocol that evaluates the implementation.
+
+
+
+That's a huge distinction.
+
+NASA's requirements-management process explicitly treats baseline changes as controlled changes rather than informal edits. 
+
+
+---
+
+Level 25 — Protocol families
+
+Eventually you'll design:
+
+MASTER PROTOCOL
+       │
+       ├── CHARACTERIZATION
+       │
+       ├── DIAGNOSTIC
+       │
+       ├── HYPOTHESIS TEST
+       │
+       ├── INTERVENTION
+       │
+       ├── REGRESSION
+       │
+       └── VALIDATION
+
+And understand why each experiment exists.
+
+
+---
+
+One important upgrade from the first curriculum
+
+I found something especially relevant while checking current instruction-following research.
+
+Modern instruction-following evaluation is moving toward verifiable instructions and programmatic verification, rather than relying entirely on subjective judgment. IFEval was designed around verifiable instruction types, while 2026 work such as LexInstructEval explicitly decomposes instructions into structured components and uses transparent programmatic verification. 
+
+So I'm adding a principle to our course:
+
+> Whenever possible, convert an instruction into something whose compliance can be independently checked.
+
+
+
+Instead of:
+
+> "Be careful."
+
+
+
+Use:
+
+> "Before execution, record the SHA-256 hash. After execution, calculate it again. The hashes MUST match."
+
+
+
+The second isn't merely more detailed.
+
+It is verifiable.
+
+
+---
+
+Our final skill target
+
+Eventually I'll give you something like:
+
+> "We have a software system, three conflicting stakeholder requirements, an unreliable test suite, a frozen baseline, and an AI agent that is allowed to modify only one component. We need to determine whether the proposed change actually solves the original problem without introducing regression."
+
+
+
+And I won't give you a template.
+
+You'll have to figure out:
+
+What is the question?
+What is authoritative?
+What is frozen?
+What can change?
+What is the independent variable?
+What is the dependent variable?
+What is ground truth?
+What counts as evidence?
+What are the hypotheses?
+What controls are needed?
+What could contaminate the experiment?
+What are the failure states?
+What are the gates?
+What must be recorded?
+What can we conclude?
+What can we NOT conclude?
+
+Then you write the protocol.
+
+I'll act as your reviewer—not your replacement.
+
+And when current/external knowledge matters, I'll research it deeply and keep web evidence separate from implementation evidence, experimental evidence, inference, and hypothesis. That's the discipline we'll preserve throughout the course. 
+
+That, I think, is the version of the curriculum worth actually studying.
